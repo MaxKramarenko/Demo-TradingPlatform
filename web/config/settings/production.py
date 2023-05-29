@@ -9,7 +9,7 @@ from .base import env
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = env_.list("DJANGO_ALLOWED_HOSTS", default=["https://demo-trade.herokuapp.com"])
+ALLOWED_HOSTS = env_.list("DJANGO_ALLOWED_HOSTS", default=["https://traiding.herokuapp.com"])
 CORS_ORIGIN_WHITELIST = list(map(lambda x: "https://" + x if not x.startswith("https://") else x, ALLOWED_HOSTS))
 
 # APPS
